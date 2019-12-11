@@ -55,7 +55,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 기본설정 외에 Templates을 찾을 경로 목록
-        'DIRS': [
+        'DIRS' [
             # djangogils/templates/폴더에 추
             TEMPLATES_DIR,
         ],
@@ -126,6 +126,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # PYPI패키지
+    # shell_plus를 쓰기 위한 library
+    'django_extensions',
 
     # 이 패키지는 application취급
     'blog',
