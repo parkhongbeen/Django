@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,7 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # PYPI패키지
+    # shell_plus를 쓰기 위한 library
+    'django_extensions',
+
+    # 이 패키지는 application취급
+    'blog',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,7 +64,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 기본설정 외에 Templates을 찾을 경로 목록
-        'DIRS' [
+        'DIRS': [
             # djangogils/templates/폴더에 추
             TEMPLATES_DIR,
         ],
@@ -118,19 +127,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-
-    # PYPI패키지
-    # shell_plus를 쓰기 위한 library
-    'django_extensions',
-
-    # 이 패키지는 application취급
-    'blog',
-]
