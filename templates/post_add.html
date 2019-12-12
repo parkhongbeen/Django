@@ -2,7 +2,7 @@
 
 {% block content %}
     <div>
-        <form action="">
+        <form action="" method="POST">
             <div class="form-group">
                 <label for="">제목</label>
                 <input name="title" type="text" class="form-control">
@@ -11,6 +11,7 @@
                 <label for="">내용</label>
                 <textarea name="text" id="" class="form-control"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary btn-block">작</button>
+            <button type="submit" class="btn btn-primary btn-block">작성</button>
         </form>
     </div>
+{% endblock %}
