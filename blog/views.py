@@ -28,4 +28,4 @@ def post_detail(request):
     # View      post_detail(이 함수)
     # Template: post_detail.html
     # 내용으로<h1>Post Dtail!</h1>을 갖도록 함
-    pass
+    return render(request, 'post_detail.html!')

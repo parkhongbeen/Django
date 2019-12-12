@@ -23,4 +23,7 @@ urlpatterns = [
     # post-list라는 IRL에 온 요청은
     # blog.views.post_list함수가 처리한
     path('post-list/', post_list),
+    path('post_detail/', post_detail),
 ]
+
+
