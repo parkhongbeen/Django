@@ -3,6 +3,7 @@
 {% block content %}
     <div>
         <form action="" method="POST">
+            {% csrf_token %}
             <div class="form-group">
                 <label for="">제목</label>
                 <input name="title" type="text" class="form-control">

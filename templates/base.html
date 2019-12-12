@@ -1,28 +1,33 @@
+<!--html:5[tab]-->
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <!--bootstrap-->
+    {% block title %}{% endblock %}
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="/static/bootstrap/bootstrap.css">
 </head>
 <body>
 <div id="wrap">
     <nav class="navbar navbar-expand navbar-dark bg-dark">
         <a href="#" class="navbar-brand">DjangoGirls</a>
-
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="{% url 'url-name-post-list'}" class="nav-link">Post List</a>
+                    <!-- urls.py의 url 을 바꾸면 자동으로 적용되도록 설정 -->
+                    <a href="{% url 'url-name-post-list' %}" class="nav-link">Post List</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'url-name-post-add' %}" class="nav-link">Post add</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container-fluid pt-2">
+        <!-- 공통 부분을 제외한 유동적으로 사용할 부분 -->
         {% block content %}{% endblock %}
     </div>
 </div>
