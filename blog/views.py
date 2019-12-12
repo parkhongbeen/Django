@@ -24,6 +24,7 @@ def post_list(request):
     }
     return render(request, 'post_list.html', context)
 
+
 def post_detail(request, pk):
     print('post_detail request', request)
     print('post_detail pk', pk)
