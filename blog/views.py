@@ -39,7 +39,7 @@ def post_detail(request, pk):
     # except:
     #     return HttpResponse('없음')
 
-    get_object_or_404(Post, pk=pk)
+    post = get_object_or_404(Post, pk=pk)
 
 
     # URL:      /post-detail/
